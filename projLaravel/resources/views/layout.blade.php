@@ -13,9 +13,9 @@
         height: 20vh;
         border-bottom: 5px solid darkgray;
     }
-    header{
-        height: 20vh;
-
+    main{
+        height: 70vh;
+        color:black;
     }
     footer{
         height:10vh;
@@ -26,11 +26,11 @@
 <body>
     <header class="container-fluid">
         <div class="row">
-            <div class="col d-flex justify-content around">
-                <a href="" class="btn btn-light"></a>
-                <a href="" class="btn btn-light"></a>
-                <a href="" class="btn btn-light"></a>
-                <a href="" class="btn btn-light"></a>
+            <div class="col d-flex justify-content-around mt-5">
+                <a href="{{url('/')}}" class="btn btn-light">Home</a>
+                <a href="{{url('/cadastro')}}" class="btn btn-light">Cadastro</a>
+                <a href="{{url('/listagem')}}" class="btn btn-light">Listagem</a>
+                <a href="{{url('/sobre')}}" class="btn btn-light">Sobre</a>
             </div>
         </div>
         @yield('cabecalho')

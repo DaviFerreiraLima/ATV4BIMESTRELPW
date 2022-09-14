@@ -5,9 +5,9 @@
     </p>
 @endsection
 @section('conteudo')
-    <h1>
-        Página Inicial
-    </h1>
+    <p>
+
+    </p>
 @endsection
 @section('rodape')
     <p class="text-center pt-2">
