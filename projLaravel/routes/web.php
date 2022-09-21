@@ -12,10 +12,11 @@ Route::get('/cadastro', function () {
 });
 
 Route::get('/salvarcadastro', [HomeController::class,"salvar"]);
+Route::get('/listagem', [HomeController::class,"lista"]);
+Route::get('/excluir/{id}', [HomeController::class,"excluir"]);
+Route::get('/alterar/{id}', [HomeController::class,"alterar"]);
+Route::get('/alterar/{id}/confirmar', [HomeController::class,"confirmar"]);
 
-Route::get('/listagem', function () {
-    return view('listagem');
-});
 
 Route::get('/sobre', function () {
     return view('sobre');
