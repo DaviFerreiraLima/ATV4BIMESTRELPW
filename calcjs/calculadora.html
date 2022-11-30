@@ -1,0 +1,74 @@
+<style>
+    .tamanho{
+        padding-top: 0.5em;
+        height: 310px;
+        width:268px;
+        margin:auto;
+        border:3px solid blue;
+    }
+    #resultado{
+        width:250px;
+        height:50px;
+        border:1px solid blue;
+        margin:auto;
+        font-size: 3.0em;
+        text-align:center;
+        line-height: 1em;
+    }
+    .botao{
+        width: 50px;
+        height: 50px;
+        display:inline-block;
+        border:1px solid blue;
+        margin:6px;
+        font-size:20px;
+        text-align: center;
+        font-weight: 900;
+        line-height: 2.3em;
+    }
+</style>
+<div class="tamanho">
+    <div id="resultado"></div>
+    <div id="bt7" onclick="atribuiValor(7)" class="botao">7</div>
+    <div id="bt8" onclick="atribuiValor(8)" class="botao">8</div>
+    <div id="bt9" onclick="atribuiValor(9)" class="botao">9</div>
+    <div id="btmais" onclick = "realiza('mais')" class="botao">+</div>
+    <div id="bt4" onclick="atribuiValor(4)" class="botao">4</div>
+    <div id="bt5" onclick="atribuiValor(5)" class="botao">5</div>
+    <div id="bt6" onclick="atribuiValor(6)" class="botao">6</div>
+    <div id="btmais" onclick = "realiza('menos')" class="botao">-</div>        
+    <div id="bt1" onclick="atribuiValor(1)" class="botao">1</div>
+    <div id="bt2" onclick="atribuiValor(2)" class="botao">2</div>
+    <div id="bt3" onclick="atribuiValor(3)" class="botao">3</div>
+    <div id="btmult" onclick = "realiza('mult')" class="botao">x</div>
+    <div id="btmn" onclick = "realiza('inv')" class="botao">+/-</div>
+    <div id="bt0" class="botao">0</div>
+    <div id="btigual" onclick="resultado()" class="botao">=</div>
+    <div id="btdiv" onclick = "realiza('div')" class="botao">/</div>
+</div>
+<script>
+    let resul = 0;
+    let valor = 0;
+    let operacao = 0;
+    function resultado(){        
+        if (operacao=="mais"){
+            resul += valor;
+        }
+        if (operacao=="menos"){
+            resul -= valor;
+        }
+        if (operacao=="mult"){
+            resul *= valor;
+        }
+        if (operacao/="div"){
+            resul *= valor;
+        }
+        document.querySelector("#resultado").innerHTML = resul;
+    }
+    function atribuiValor(x){
+        valor = x;
+    }
+    function realiza(op){
+        operacao = op;
+    }
+</script>
